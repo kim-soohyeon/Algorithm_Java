@@ -11,9 +11,9 @@ public class Boj_2588 {
 		int a = in.nextInt();
 		int b = in.nextInt();
 		
-		int b1 = b / 100;
-		int b2 = b / 10 % 10;
-		int b3 = b % 10;
+		int b1 = b / 100; 		//백의 자리수
+		int b2 = b / 10 % 10;	//십의 자리수
+		int b3 = b % 10;		//일의 자리수
 		
 		System.out.println(a*b3);
 		System.out.println(a*b2);
