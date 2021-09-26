@@ -14,12 +14,10 @@ public class Boj_5585 {
 		int answer = 0;//잔돈의 매수
 		int[] arr = {500, 100, 50, 10, 5, 1};
 		
-		while(money > 0) {
-			for(int en : arr) {
-				if(money >= en) {
-					answer += money / en;
-					money %= en;
-				}
+		for(int en : arr) {
+			if(money >= en) {
+				answer += money / en;
+				money %= en;
 			}
 		}
 		
