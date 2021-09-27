@@ -21,7 +21,7 @@ public class Boj_1931 {
 			time[i][0] = Integer.parseInt(st.nextToken());//시작시간
 			time[i][1] = Integer.parseInt(st.nextToken());//종료시간
 		}
-		System.out.println(time);
+		
 		// 종료시간 기준으로 정렬하기 위해 compare 재정의 
 		Arrays.sort(time, new Comparator<int[]>() {
 			
@@ -32,12 +32,11 @@ public class Boj_1931 {
 				if(start[1] == end[1]) {
 					return start[0] - end[0];
 				}
-				
+				// 종료시간 오름차순 정렬
 				return start[1] - end[1];
 			}
  
 		});		
-		System.out.println(time);
 		
 		int cnt = 0;//회의의 최대 개수
 		int endTime = 0;
