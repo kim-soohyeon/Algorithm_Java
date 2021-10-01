@@ -1,4 +1,4 @@
-package greedy;
+package 이코테.greedy;
 
 public class ex01 {
 
