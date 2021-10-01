@@ -25,7 +25,7 @@ public class greedy02 {
 			}
 		}
 		System.out.println(answer);
-
+		br.close();		
 	}
 
 }
