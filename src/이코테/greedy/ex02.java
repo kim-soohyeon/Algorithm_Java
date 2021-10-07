@@ -25,15 +25,17 @@ public class ex02 {
 		}
 		
 		Arrays.sort(arr);//오름차순 정렬
-		int cnt = n - 1;
 		
 		while(m > 0) {
 			for(int i = 0; i < k; i++) {
 				answer += arr[n - 1];
 				m--;
 			}
+			answer += arr[n - 2];
+			m--;
 		}
 				
+		System.out.println(answer);
 		br.close();
 	}
 
