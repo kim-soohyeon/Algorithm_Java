@@ -3,7 +3,7 @@ package 이코테.Implementation;
 import java.util.Scanner;
 
 public class Impl07_answer {
-
+	//럭키 스트레이트 정답
 	public static String str;
     public static int summary = 0;
 
