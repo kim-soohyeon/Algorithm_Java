@@ -47,7 +47,7 @@ public class ex03 {
 		}
 		
 		// 시뮬레이션 시작
-		int cnt = 0;//이동 횟수
+		int cnt = 1;//이동 횟수
 		int turn_time = 0;
 		while(true) {
 			// 왼쪽으로 회전
