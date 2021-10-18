@@ -2,7 +2,6 @@ package 이코테.DFS_BFS;
 
 public class ex5_4 {
 	//재귀함수의 종료 조건 예제
-	
 	public static void recursiveFunction(int i) {
         // 100번째 호출을 했을 때 종료되도록 종료 조건 명시
         if (i == 100) return;
