@@ -11,7 +11,7 @@ public class Main {
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		float[] arr = new float[n];
-		float max = 0;
+		float max = 0; 
 		for(int i = 0; i < n; i++) {
 			arr[i] = Integer.parseInt(st.nextToken());
 			if(arr[i] > max) {
