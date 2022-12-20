@@ -8,7 +8,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		int n = Integer.parseInt(br.readLine());
-		
+		 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		float[] arr = new float[n];
 		float max = 0;
