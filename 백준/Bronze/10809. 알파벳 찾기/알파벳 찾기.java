@@ -4,27 +4,29 @@ import java.io.InputStreamReader;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException {
-		//	ì•ŒíŒŒë²³ ì°¾ê¸°
+	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
+		
 		String s = br.readLine();
-		int[] arr = new int[26];
-		
-		for(int i = 0; i < 26; i++) {
-			arr[i] = -1;
+		int[] answer = new int[26];
+		for(int i = 0; i < answer.length; i++) {
+			// ¹è¿­ ÃÊ±âÈ­
+			answer[i] = -1;
 		}
-		
-		for(int i = 0; i < s.length(); i++) {
-			int alphabetIndex = s.charAt(i) - 'a';
-			if(arr[alphabetIndex] == -1) {
-				arr[alphabetIndex] = i;
+		for(int j = 0; j < s.length(); j++) {
+			// À§Ä¡ Ã£±â
+			if(answer[s.charAt(j) - 'a'] <= -1) {
+				answer[s.charAt(j) - 'a'] = j;
 			}
 		}
 		
-		for(int value : arr) {
-			System.out.print(value + " ");
+		for(int val : answer) {
+			// °á°ú Ãâ·Â
+			sb.append(val + " ");
 		}
-
+		System.out.print(sb);
+		
 		br.close();
 	}
 
