@@ -1,23 +1,29 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.util.*;
 
 public class Main {
- public static void main(String[] args) throws Exception{
-  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-  
-  int testCase = Integer.parseInt(br.readLine());
-  
-  for(int i=0; i<testCase; i++){
-   int decimal = Integer.parseInt(br.readLine());
-   String binary = Integer.toString(decimal,2);
-   String binArr[] = binary.split("");
-   
-   for(int j=binArr.length-1; j>=0; j--){
-    if(binArr[j].equals("1")){
-     System.out.print(binArr.length-j-1 + " ");
-    }
-   }
-   System.out.println();
-  }
- }
+
+	public static void main(String[] args) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
+		
+		int t = Integer.parseInt(br.readLine());
+		String str;
+//		StringTokenizer st = new StringTokenizer(br.readLine());
+		for(int i = 0; i < t; i++) {
+			str = Integer.toBinaryString(Integer.parseInt(br.readLine()));
+//			str = Integer.toBinaryString(Integer.parseInt(st.nextToken()));
+			for(int k = str.length() - 1; k >= 0; k--) {
+				if(str.charAt(k) == '1') {
+					sb.append(str.length() - 1 - k + " ");
+				}
+			}
+			sb.append("\n");
+		}
+		
+		System.out.print(sb);
+		
+		br.close();
+	}
+
 }
