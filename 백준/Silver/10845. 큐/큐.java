@@ -12,37 +12,30 @@ public class Main {
 		 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		 int n = Integer.parseInt(br.readLine());//명령 개수
 		 StringBuilder sb = new StringBuilder();
-		 int[] arr = new int[n];
-		 int size = 0;
+		 Deque<Integer> que = new LinkedList<>();
 		 String s;
 		 for(int i = 0; i < n; i++) {
 			 s = br.readLine();
 			 if(s.contains("push")) {
 				 StringTokenizer st = new StringTokenizer(s);
 				 st.nextToken();
-				 arr[size++] = Integer.parseInt(st.nextToken());
+				 que.add(Integer.parseInt(st.nextToken()));
 			 }else {
 				 switch(s) {
 				 	case "pop":
-				 		if(size == 0) {
+				 		if(que.isEmpty()) {
 				 			// 비어있는 경우
 				 			sb.append(-1 + "\n");
 				 		}else {
-				 			size--;
-				 			sb.append(arr[0] + "\n");
-				 			int tmp;
-				 			for(int j = 1; j <= size; j++) {
-				 				tmp = arr[j];
-				 				arr[j - 1] = tmp;
-				 				arr[j] = 0;
-				 			}
+				 			sb.append(que.peek() + "\n");
+				 			que.poll();
 				 		}
 				 		break;
 				 	case "size":
-				 		sb.append(size + "\n");
+				 		sb.append(que.size() + "\n");
 				 		break;
 				 	case "empty":
-				 		if(size == 0) {
+				 		if(que.isEmpty()) {
 				 			// 비어있는 경우
 				 			sb.append(1 + "\n");
 				 		}else {
@@ -50,19 +43,19 @@ public class Main {
 				 		}
 				 		break;
 				 	case "front":
-				 		if(size == 0) {
+				 		if(que.isEmpty()) {
 				 			// 비어있는 경우
 				 			sb.append(-1 + "\n");
 				 		}else {
-				 			sb.append(arr[0] + "\n");
+				 			sb.append(que.peek() + "\n");
 				 		}
 				 		break;
 				 	case "back":
-				 		if(size == 0) {
+				 		if(que.isEmpty()) {
 				 			// 비어있는 경우
 				 			sb.append(-1 + "\n");
 				 		}else {
-				 			sb.append(arr[size - 1] + "\n");
+				 			sb.append(que.peekLast() + "\n");
 				 		}
 				 		break;
 				 }
