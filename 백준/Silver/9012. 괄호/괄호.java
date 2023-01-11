@@ -8,10 +8,12 @@ public class Main {
 		
 		int t = Integer.parseInt(br.readLine());
 		String str;
+		int open;
+		int close;
 		for(int i = 0; i < t; i++) {
 			str = br.readLine();
-			int open = 0;
-			int close = 0;
+			open = 0;
+			close = 0;
 			Boolean status = true;
 			for(char chr : str.toCharArray()) {
 				if(chr == '(') {
@@ -28,14 +30,11 @@ public class Main {
 			}
 			if(status) {
 				if(open == close) {
-//					System.out.println("YES");
 					sb.append("YES");
 				}else {
-//					System.out.println("NO");
 					sb.append("NO");
 				}
 			}else {
-//				System.out.println("NO");
 				sb.append("NO");
 			}
 			sb.append("\n");
