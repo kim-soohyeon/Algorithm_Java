@@ -4,6 +4,7 @@ public class Main {
 
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
 		
 		int t = Integer.parseInt(br.readLine());
 		String str;
@@ -20,21 +21,26 @@ public class Main {
 				}
 				
 				if(open < close) {
+					// 닫힌 괄호가 열린 괄호보다 먼저 나올 경우 예외 처리
 					status = false;
 					break;
 				}
 			}
 			if(status) {
 				if(open == close) {
-					System.out.println("YES");
+//					System.out.println("YES");
+					sb.append("YES");
 				}else {
-					System.out.println("NO");
+//					System.out.println("NO");
+					sb.append("NO");
 				}
 			}else {
-				System.out.println("NO");
+//				System.out.println("NO");
+				sb.append("NO");
 			}
-
+			sb.append("\n");
 		}
+		System.out.print(sb);
 		
 		br.close();
 	}
