@@ -9,10 +9,12 @@ public class Main {
         int n = Integer.parseInt(br.readLine()); // 테스트 케이스 개수
 
         String str;
+        String[] arr;
+        Stack<String> stk;
         for(int i = 0; i < n; i++){
             str = br.readLine();
-            String[] arr = str.split(" ");
-            Stack<String> stk = new Stack<>();
+            arr = str.split(" ");
+            stk = new Stack<>();
             for(String word : arr){
                 stk.push(word);
             }
@@ -24,6 +26,7 @@ public class Main {
             sb.append("\n");
         }
         System.out.println(sb);
+        
         br.close();
     }
 }
