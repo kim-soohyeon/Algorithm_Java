@@ -1,11 +1,11 @@
 class Solution {
     public double solution(int[] numbers) {
-        int sum = 0;
+        double answer = 0;
         for(double num : numbers){
-            sum += num;
+            answer += num;
         }
         
-        double answer = 1.0 * sum / numbers.length;
+        answer /= numbers.length;
         
         return answer;
     }
