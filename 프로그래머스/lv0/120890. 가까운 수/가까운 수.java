@@ -4,11 +4,7 @@ class Solution {
         
         // 두 수의 차 구하기
         for(int i = 0; i < array.length; i++){
-            if(array[i] >= n){
-                arr[i] = array[i] - n;
-            }else{
-                arr[i] = n - array[i];
-            }
+            arr[i] = Math.abs(array[i] - n);        
         }
         
         // 두 수의 차가 가장 작은 인덱스값 구하기
