@@ -5,7 +5,6 @@ class Solution {
         long answer = 0;
         
         String[] strArr = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-        List<String> strList = new ArrayList<>(Arrays.asList(strArr));
         
         for(int i = 0; i < strArr.length; i++){
             if(numbers.contains(strArr[i])){
