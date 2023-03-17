@@ -18,7 +18,7 @@ class Solution {
             catch (NumberFormatException ex){
                 continue;
             }
-        }
+        } 
 
         return answer;
     }
