@@ -5,6 +5,7 @@ class Solution {
         long answer = 0;
         
         String[] strArr = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+        List<String> strList = new ArrayList<>(Arrays.asList(strArr));
         
         for(int i = 0; i < strArr.length; i++){
             if(numbers.contains(strArr[i])){
@@ -13,7 +14,6 @@ class Solution {
             
             try{
                 answer = Long.parseLong(numbers);
-                System.out.println(answer);
                 break;
             }
             catch (NumberFormatException ex){
