@@ -1,5 +1,3 @@
-import java.util.*;
-
 class Solution {
     public String solution(String my_string, int num1, int num2) {
         String answer = "";
@@ -10,10 +8,6 @@ class Solution {
         chrArr[num1] = chrArr[num2];
         chrArr[num2] = temp;
         
-        for(char chr : chrArr){
-            answer += chr;
-        }        
-        
-        return answer;
+        return String.valueOf(chrArr);
     }
 }
