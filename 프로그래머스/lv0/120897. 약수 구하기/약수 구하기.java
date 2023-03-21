@@ -6,7 +6,7 @@ class Solution {
         for(int i = n; i > 0; i--){
             if(n % i == 0){
                 hash.add(i);
-                hash.add(n / i);
+                // hash.add(n / i);
             }
         }
         
