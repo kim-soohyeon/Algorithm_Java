@@ -5,6 +5,7 @@
 1. [leetcode Top Interview Questions Easy](https://leetcode.com/problem-list/top-interview-questions/?difficulty=EASY&page=1)
 3. [hacker Rank Easy Level](https://www.hackerrank.com/domains/algorithms?filters%5Bdifficulty%5D%5B%5D=easy)
 4. [백준온라인저지 단계별로 풀어보기](https://www.acmicpc.net/step)
+5. [프로그래머스 | 코딩테스트 입문](https://school.programmers.co.kr/learn/challenges/beginner?order=recent)
 
 
 ## 🌊 Greedy 뽀개기
