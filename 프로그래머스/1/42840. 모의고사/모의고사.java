@@ -1,7 +1,7 @@
 import java.util.*;
 
 class Solution {
-    public int[] solution(int[] answers) {
+    public ArrayList<Integer> solution(int[] answers) {
         int[] scores = new int[3];
         int[][] pattern = {
             {1, 2, 3, 4, 5},
@@ -25,6 +25,6 @@ class Solution {
             }
         }
         
-        return answer.stream().mapToInt(Integer::intValue).toArray();
+        return answer;
     }
 }
