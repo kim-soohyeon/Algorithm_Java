@@ -15,16 +15,13 @@ class Solution {
 
             int answer = 0;
             for (int i = 2; i < N - 2; i++) {
-                // 현재 건물 기준으로 좌우 2칸만 비교
                 int leftMax = Math.max(arr[i - 2], arr[i - 1]);
                 int rightMax = Math.max(arr[i + 1], arr[i + 2]);
-                
-                // 현재 건물이 양쪽을 모두 초과하는 경우에만 조망권 확보
-                if (arr[i] > leftMax && arr[i] > rightMax) {
-                    answer += arr[i] - Math.max(leftMax, rightMax);  // 초과하는 높이만큼 더함
+                int max = Math.max(leftMax, rightMax);                
+                if (arr[i] > max) {
+                    answer += arr[i] - max;
                 }
             }
-
             sb.append(answer).append("\n");
         }
         System.out.println(sb);
