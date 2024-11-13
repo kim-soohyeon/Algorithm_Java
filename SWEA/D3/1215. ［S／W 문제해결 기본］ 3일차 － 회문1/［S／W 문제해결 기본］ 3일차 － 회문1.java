@@ -2,16 +2,19 @@ import java.util.Scanner;
 
 class Solution
 {
+	private static char[][] matrix = new char[8][8];
+	private static int len;
+
 	public static void main(String args[]) throws Exception
 	{
 		Scanner sc = new Scanner(System.in);
 		StringBuilder sb = new StringBuilder();
-		char[][] matrix = new char[8][8];
+		matrix = new char[8][8];
 
 		for(int test_case = 1; test_case <= 10; test_case++)
 		{
 			sb.append("#").append(test_case).append(" ");
-			int len = sc.nextInt();
+			len = sc.nextInt();
 			sc.nextLine();
 			for(int i = 0; i < 8; i++){
 				String str = sc.nextLine();
@@ -22,9 +25,9 @@ class Solution
 			for(int i = 0; i < 8; i++) {
 				for(int j = 0; j <= 8 - len; j++){
 					//가로
-					if(solution(matrix, i, j, len, true)) answer++;
+					if(solution(i, j, true)) answer++;
 					//세로
-					if(solution(matrix, j, i, len, false)) answer++;
+					if(solution(j, i, false)) answer++;
 				}
 			}
 			sb.append(answer).append("\n");
@@ -32,7 +35,7 @@ class Solution
 		System.out.println(sb);
 	}
 
-	private static boolean solution(char[][] matrix, int row, int col, int len, boolean flag){
+	private static boolean solution(int row, int col, boolean flag){
 		if(flag){
 			//가로
 			for(int i = 0; i < len /2; i++){
