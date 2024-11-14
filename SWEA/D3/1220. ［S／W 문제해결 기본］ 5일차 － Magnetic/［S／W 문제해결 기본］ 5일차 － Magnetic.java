@@ -1,3 +1,4 @@
+//import java.io.FileInputStream;
 import java.util.Scanner;
 
 class Solution
@@ -20,18 +21,14 @@ class Solution
 
 			int answer = 0;
 			for(int i = 0; i < 100; i++){
+				boolean isN = false;
 				for(int j = 0; j < 100; j++){
 					int num = arr[j][i];
-					if(num == 1){
-						int k = j;
-						while(k++ < 99){
-							int num2 = arr[k][i];
-							if(num2 == 2){
-								answer++;
-								j = k;
-								break;
-							}
-						}
+					if(arr[j][i] == 1) {
+						isN = true;
+					}else if(arr[j][i] == 2 && isN){
+						answer++;
+						isN = false;
 					}
 				}
 			}
