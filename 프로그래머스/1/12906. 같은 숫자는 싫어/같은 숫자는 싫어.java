@@ -12,10 +12,7 @@ public class Solution {
             }
         }
 
-        int[] answer = new int[stack.size()];
-        for(int i = answer.length - 1; i >= 0; i--){
-            answer[i] = stack.pop();
-        }
+        int[] answer = stack.stream().mapToInt(Integer::intValue).toArray();
 
         return answer;
     }
