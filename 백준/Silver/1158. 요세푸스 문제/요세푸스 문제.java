@@ -1,33 +1,38 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main {
 
 	public static void main(String[] args) throws Exception{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		StringBuilder sb = new StringBuilder();
-		
-		int n = Integer.parseInt(st.nextToken());
-		int k = Integer.parseInt(st.nextToken());
-		Queue<Integer> que = new LinkedList<>();
-		
-		// 초기화
-		for(int i = 0; i < n; i++) {
-			que.add(i + 1);
-		}
-		
-		sb.append("<");
-		while(que.size() > 1) {
-			for(int i = 0; i < k - 1; i++) {
-				que.add(que.poll());
-			}
-			sb.append(que.poll() + ", ");
-		}
-		sb.append(que.poll() + ">");
-		System.out.print(sb);
-			
-		br.close();
-	}
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int n = Integer.parseInt(st.nextToken());
+        int k = Integer.parseInt(st.nextToken());
 
-}
+        Queue<Integer> queue = new ArrayDeque<>();
+        for(int i = 1; i <= n; i++){
+            queue.add(i);
+        }
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("<");
+        int idx = 1;
+        while(!queue.isEmpty()){
+            if(queue.size() == 1){
+                sb.append(queue.poll());
+                break;
+            }
+            while(idx != k){
+                queue.add(queue.poll());
+                idx++;
+            }
+            sb.append(queue.poll() + ", ");
+            idx = 1;
+        }
+        sb.append(">");
+
+        System.out.println(sb);
+        br.close();
+    }
+}    
