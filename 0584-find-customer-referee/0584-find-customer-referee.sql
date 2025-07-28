@@ -1,4 +1,5 @@
 /* Write your PL/SQL query statement below */
 SELECT name
 FROM Customer
-WHERE nvl(referee_id, 0) != 2
+WHERE referee_id != 2
+    OR referee_id IS NULL
