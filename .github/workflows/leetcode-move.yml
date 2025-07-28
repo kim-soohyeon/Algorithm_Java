@@ -50,6 +50,10 @@ jobs:
             git config --global user.email 'github-actions[bot]@users.noreply.github.com'
             git add -A
             git commit -m "chore: Move leetcode solutions to leetcode folder"
+            
+            # 원격 변경사항 먼저 rebase로 가져오기
+            git pull --rebase origin master
+            
             git push
           else
             echo "No changes to commit"
