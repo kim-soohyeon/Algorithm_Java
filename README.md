@@ -38,4 +38,12 @@
 | [1724-customer-who-visited-but-did-not-make-any-transactions](https://github.com/kim-soohyeon/Algorithm_Java/tree/master/1724-customer-who-visited-but-did-not-make-any-transactions) |
 | [1827-invalid-tweets](https://github.com/kim-soohyeon/Algorithm_Java/tree/master/1827-invalid-tweets) |
 | [1908-recyclable-and-low-fat-products](https://github.com/kim-soohyeon/Algorithm_Java/tree/master/1908-recyclable-and-low-fat-products) |
+## Array
+|  |
+| ------- |
+| [0001-two-sum](https://github.com/kim-soohyeon/Algorithm_Java/tree/master/0001-two-sum) |
+## Hash Table
+|  |
+| ------- |
+| [0001-two-sum](https://github.com/kim-soohyeon/Algorithm_Java/tree/master/0001-two-sum) |
 <!---LeetCode Topics End-->
